@@ -5,7 +5,7 @@ import { Message as ChatMessage } from '../types';
 // Initialize OpenAI with the API key from environment variables
 const openai = new OpenAI({
   baseURL:"https://api.deepinfra.com/v1/openai",
-  apiKey: "nBdK0KcYvh2db6eyTosq1tTGxSb247eW"!, // The `!` asserts that it's defined; ensure it's set
+  apiKey: import.meta.env.VITE_OPENAI_API_KEY!,
   dangerouslyAllowBrowser: true,
 });
 
